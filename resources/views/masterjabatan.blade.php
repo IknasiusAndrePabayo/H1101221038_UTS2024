@@ -79,9 +79,9 @@
         <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Tambah Data Pegawai</li>
+            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Master Jabatan</li>
         </ol>
-        <h6 class="font-weight-bolder text-white mb-0">Tambah Data Pegawai</h6>
+        <h6 class="font-weight-bolder text-white mb-0">Master Jabatan</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
         <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -197,7 +197,7 @@
                 <div class="col-lg-12 mb-lg-0 mb-4">
                     <div class="card z-index-2 h-100">
                     <!-- ... -->
-                    <h1>Data Pegawai</h1>
+                    <h4>Data Pegawai</h4>
                     @if($pegawai)
                         <div class="container">
                             <table class="table">
