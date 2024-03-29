@@ -86,6 +86,30 @@
       },
     });
   </script>
+
+<script>
+    // Format gaji dengan titik setiap tiga digit
+    function formatGaji(gaji) {
+        // Mengubah nilai gaji menjadi string
+        var gajiString = gaji.toString();
+        var parts = gajiString.split('.');
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        return parts.join(".");
+    }
+
+    // Set default value for Gaji input
+    window.addEventListener('DOMContentLoaded', function() {
+        var gajiInput = document.getElementById('gaji');
+        gajiInput.value = gajiInput.value || 'Rp.';
+        
+        // Format nilai gaji saat input berubah
+        gajiInput.addEventListener('input', function() {
+            var gaji = this.value.replace(/\D/g, '');
+            this.value = formatGaji(gaji);
+        });
+    });
+</script>
+
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {

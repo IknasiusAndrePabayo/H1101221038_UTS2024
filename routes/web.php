@@ -1,22 +1,18 @@
 <?php
 
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\MasterJabatanController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\BerandaController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
 
-Route::get('/main', function () {
-    return view('main   ');
-});
+Route::get('/beranda', [BerandaController::class, 'show'])->name('showBeranda');
+Route::get('/tambah-data-pegawai', [PegawaiController::class, 'tambahData'])->name('tambahDataPegawai');
+
+Route::post('/pegawai', [PegawaiController::class, 'store'])->name('pegawai.store');
+
+Route::get('/master-jabatan', [MasterJabatanController::class, 'show'])->name('showMasterJabatan');
+
